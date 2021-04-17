@@ -4,16 +4,13 @@ import { Counter } from "./features/counter/Counter";
 import "./App.css";
 import "./index.css";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 
 function App() {
   return (
-    <Router>
-      <Route path="/" exact render={() => <Home />}></Route>
-      <div className="App">
-        <header className="bg-gray-200">Test</header>
-      </div>
-    </Router>
+    <div>
+      <Home />
+    </div>
   );
 }
 
