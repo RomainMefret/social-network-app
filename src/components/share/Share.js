@@ -33,10 +33,11 @@ export default function Share() {
       try {
         await axios.post(`${API}upload`, data);
       } catch (err) {}
+      
     }
     try {
       await axios.post(`${API}posts`, newPost);
-      window.location.reload();
+      window.location.reload(); // Prob local storage quand reload page
     } catch (err) {}
   };
 

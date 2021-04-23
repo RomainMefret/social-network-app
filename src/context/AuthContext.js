@@ -1,26 +1,41 @@
 import { createContext, useEffect, useReducer } from "react";
 import AuthReducer from "./AuthReducer";
 
-const INITIAL_STATE = {
-  user: {
-    _id: "607ede77768eab41500a3016",
-    username: "Aurélien",
-    email: "aurelien@go2scale.com",
-    profilePicture: "",
-    coverPicture: "",
-    followers: [],
-    followings: [],
-    isAdmin: false,
-  },
-  isFetching: false,
-  error: false,
-};
-
 // const INITIAL_STATE = {
-//   user: JSON.parse(localStorage.getItem("user")) || null,
+//   user: {
+//     _id: "607ede77768eab41500a3016",
+//     username: "Aurélien",
+//     email: "aurelien@go2scale.com",
+//     profilePicture: "",
+//     coverPicture: "",
+//     followers: [],
+//     followings: [],
+//     isAdmin: false,
+//   },
 //   isFetching: false,
 //   error: false,
 // };
+
+// const userJson = {
+//   _id: "607ede77768eab41500a3016",
+//   username: "Aurélien",
+//   email: "aurelien@go2scale.com",
+//   profilePicture: "",
+//   coverPicture: "",
+//   followers: [],
+//   followings: [],
+//   isAdmin: false,
+// };
+
+// if (localStorage.getItem("user") === null) {
+//   localStorage.setItem("user", { userJson });
+// }
+
+const INITIAL_STATE = {
+  user: JSON.parse(localStorage.getItem("user")) || null,
+  isFetching: false,
+  error: false,
+};
 
 export const AuthContext = createContext(INITIAL_STATE);
 
